@@ -60,5 +60,54 @@ SELECT ID
 
 --problems 5-10 : view pdf
 
+--scratch script
+--problem 5
+--DROP TABLE Course;
+
+CREATE TABLE Student (
+    name         VARCHAR (100) NOT NULL,
+    studentID    NUMERIC       NOT NULL,
+    email        VARCHAR (100) NOT NULL,
+    studyProgram VARCHAR (100) CHECK (studyProgram IN ('data science', 'computer science', 'mathematics', 'industrial engineering') ),
+    PRIMARY KEY (
+        studentID
+    )
+);
+
+CREATE TABLE Course (
+    code    VARCHAR (100)  NOT NULL,
+    name    VARCHAR (100)  NOT NULL,
+    credits NUMERIC (3, 1) NOT NULL
+                           CHECK (credits > 0.0),
+    teacher VARCHAR (100),
+    MOOC    BOOLEAN        DEFAULT FALSE,
+    PRIMARY KEY (
+        code
+    )
+);
+
+CREATE TABLE Grade (
+    studentID  NUMERIC       NOT NULL,
+    courseCode VARCHAR (100) NOT NULL,
+    grade      INTEGER       NOT NULL
+                             CHECK (grade >= 0 AND 
+                                    grade <= 5),
+    PRIMARY KEY (
+        studentID,
+        courseCode,
+        grade
+    ),
+    FOREIGN KEY (studentID) REFERENCES Student(studentID),
+    FOREIGN KEY (courseCode) REFERENCES Course(code)
+);
+
+
+
+
+
+
+
+
+
 
 
