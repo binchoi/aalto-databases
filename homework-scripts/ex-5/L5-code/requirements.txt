@@ -1,0 +1,12 @@
+greenlet
+importlib-metadata
+numpy
+pandas
+psycopg2-binary
+python-dateutil
+pytz
+six
+SQLAlchemy
+typing-extensions
+zipp
+matplotlib

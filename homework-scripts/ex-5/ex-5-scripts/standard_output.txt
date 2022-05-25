@@ -1,0 +1,83 @@
+Please consider the comments in the python file as they are more descriptive than the stdout messages
+DB connection is OK.
+DB connection is OK.
+DB connection is OK.
+DB connection is OK.
+
+**************
+
+
+Snow Day Count by Place (code):
+place
+100968      8
+101464      0
+101649     48
+102035    218
+Name: snow, dtype: int64
+
+Amount of Snow per Month in Utsjoki:
+         snow
+month        
+1      2079.0
+2      2359.0
+3      2924.0
+4      2800.0
+5      1453.0
+6         0.0
+7         0.0
+8         0.0
+9         0.0
+10      131.0
+11      155.0
+12      439.0
+
+Max Snow Month in Utsjoki:
+snow    3
+dtype: int64
+
+Amount of recorded Snow per Month in Mustasaari:
+       snow
+month      
+1       0.0
+2       0.0
+3       0.0
+4       0.0
+5       0.0
+6       0.0
+7       0.0
+8       0.0
+9       0.0
+10      0.0
+11      0.0
+12      0.0
+
+Max Snow Month in Mustasaari:
+snow    1
+dtype: int64
+
+**************
+
+
+Correlation coefficient between lowest and highest attribute: 0.902845
+0.9028454776893672
+           lowest   highest
+lowest   1.000000  0.902845
+highest  0.902845  1.000000
+
+Correlation coefficient between lowest and highest attribute GROUPED BY location:
+place
+100968    0.903300
+101464    0.961030
+101649    0.945631
+102035    0.903272
+Name: (lowest, highest), dtype: float64
+
+**************
+
+
+Correlation coefficient between latitude and average temperature (e.g. air_temperature, easily replaceable by other temperature data): ~ -0.363419
+-0.36341904815173426
+                 air_temperature  latitude
+air_temperature         1.000000 -0.363419
+latitude               -0.363419  1.000000
+Open your GUI to see the plots for 3d and 3e (screenshots are also included in the submission file)
